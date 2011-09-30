@@ -20,9 +20,11 @@
     <!--[if IE 8]><link rel="stylesheet" type="text/css" href="[{ $oViewConf->getResourceUrl() }]oxid_ie8.css"><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="[{ $oViewConf->getResourceUrl() }]oxid_ie7.css"><![endif]-->
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="[{ $oViewConf->getResourceUrl() }]oxid_ie6.css"><![endif]-->
+[{* BEGIN included by marm_slider *}]
     [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0 }]
         <link rel="stylesheet" type="text/css" href="[{ $oViewConf->getResourceUrl() }]css/libs/anythingslider.css">
     [{/if}]
+[{* END included by marm_slider *}]
     [{if $rsslinks}]
       [{foreach from=$rsslinks item='rssentry'}]
         <link rel="alternate" type="application/rss+xml" title="[{$rssentry.title|strip_tags}]" href="[{$rssentry.link}]">
@@ -177,11 +179,13 @@
 
         <div class="clear"></div>
     </div>
+[{* BEGIN included by marm_slider *}]
     [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0 }]
         <div class="oxSlider">
             [{include file="widget/promoslider.tpl" }]
         </div>
     [{/if }]
+[{* END included by marm_slider *}]
     <div id="content">
         <div id="left">[{ include file="_left.tpl" }]</div>
         <div id="path">[{ include file="_path.tpl" is_start=$isStart}]</div>
