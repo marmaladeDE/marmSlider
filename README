@@ -1,0 +1,46 @@
+
+#########################
+# Installation / Config #
+#########################
+
+1) copy files from "copy_this" to your shop
+
+#####	
+2) execute SQL :
+ALTER TABLE `oxactions`
+ADD `OXPIC`   VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXACTIVETO`,
+ADD `OXPIC_1` VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXPIC`,
+ADD `OXPIC_2` VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXPIC_1`,
+ADD `OXPIC_3` VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXPIC_2`,
+ADD `OXLINK`   VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXPIC_3`,
+ADD `OXLINK_1` VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXLINK`,
+ADD `OXLINK_2` VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXLINK_1`,
+ADD `OXLINK_3` VARCHAR(128) NOT NULL DEFAULT '' AFTER `OXLINK_2`;
+
+
+#####	
+3) Add the following module-entries in your configuration
+
+start => marm/slider/marm_slider_start
+oxactions => marm/slider/marm_slider_oxactions
+oxactionlist => marm/slider/marm_slider_oxactionlist
+actions_main => marm/slider/marm_slider_actions_main
+actions_list => marm/slider/marm_slider_actions_list
+oxutilsfile => marm/slider/marm_slider_oxutilsfile
+
+	
+#####	
+4) edit /config.inc.php by adding or appending:
+
+	    $this->aModules = array(
+        'oxutilsfile' => 'marm/slider/marm_slider_oxutilsfile'
+    );
+
+
+#####
+5) merge changed_full with you shop theme 
+
+
+#####
+6) clean you language cache (cleanup eshop tmp dir)
+

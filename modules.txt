@@ -1,0 +1,7 @@
+
+start => marm/slider/marm_slider_start
+oxactions => marm/slider/marm_slider_oxactions
+oxactionlist => marm/slider/marm_slider_oxactionlist
+actions_main => marm/slider/marm_slider_actions_main
+actions_list => marm/slider/marm_slider_actions_list
+oxutilsfile => marm/slider/marm_slider_oxutilsfile
