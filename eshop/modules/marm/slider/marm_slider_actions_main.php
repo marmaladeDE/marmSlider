@@ -81,7 +81,7 @@ class marm_slider_actions_main extends marm_slider_actions_main_parent
             $sChosenArtCat = oxConfig::getParameter( "artcat");
             $sChosenArtCat = $this->_getCategoryTree( "artcattree", $sChosenArtCat, $soxId);
 
-            include_once 'inc/'.strtolower(__CLASS__).'.inc.php';
+            include_once 'inc/actions_main.inc.php';
             $this->_aViewData['oxajax'] = $aColumns;
 
             return "popups/actions_main.tpl";
