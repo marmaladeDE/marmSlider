@@ -3,7 +3,7 @@
 # Installation / Config #
 #########################
 
-1) copy files from "copy_this" to your shop
+1) copy files from "eshop" to your shop
 
 #####	
 2) execute SQL :
@@ -38,31 +38,12 @@ oxutilsfile => marm/slider/marm_slider_oxutilsfile
 
 
 #####
-5) merge changed_full with you shop theme 
-
-    5.1 in header you have to include anything slider CSS file like this:
-
-        [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0 }]
-            <link rel="stylesheet" type="text/css" href="[{ $oViewConf->getResourceUrl() }]css/libs/anythingslider.css">
-        [{/if}]
-
-    5.2 ensure that in footer or header, you use oxscript smarty plugin,
-        as tpl/widget/promoslider.tpl uses it to include javascript files
-        so it should look like this (from tpl/_footer.tpl):
-
-        [{oxscript}][{oxid_include_dynamic file="dyn/oxscript.tpl" }]
-        <!--[if lt IE 7]><script type="text/javascript">oxid.popup.addShim();</script><![endif]-->
-        </body>
-        </html>
-
-    5.3 place your slider code where you want. like example
-        in tpl/_header.tpl before <div id="content"> :
-
-        [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0 }]
-            <div class="oxSlider">
-                [{include file="widget/promoslider.tpl" }]
-            </div>
-        [{/if }]
+5) place your slider code where you want on start-page.
+    like example in tpl/_header.tpl before <div id="content"> :
+	
+    [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0 }]
+            [{include file="inc/marm_slider.tpl" }]
+    [{/if }]
 
 #####
 6) clean you language cache (cleanup eshop tmp dir)

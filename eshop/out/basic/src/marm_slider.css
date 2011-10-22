@@ -1,0 +1,43 @@
+#marm-slider {
+	overflow:hidden;
+	margin:5px;
+	height:270px !important;
+	width:100% !important;
+}
+
+#marm-slider a,
+#marm-slider a:hover {
+	text-decoration:none;
+}
+
+#marm-slider a img,
+#marm-slider a:hover img{
+	border:none;
+}
+
+#marm-slider .marmBox {
+	position:absolute;
+	bottom:15px;
+	right:15px;
+	padding:10px;
+	background-color:rgba(255,255,255,0.8);
+	border-radius:5px;
+	width:300px;
+	opacity:0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#marm-slider a:hover .marmBox {
+	opacity:1;
+}
+
+#marm-slider .marmBox strong {
+	display:block;
+	float:right;
+	width:100%;
+	text-align:right;
+	padding:3px;
+	font-size:12px;
+}
