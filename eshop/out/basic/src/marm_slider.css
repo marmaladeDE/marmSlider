@@ -16,8 +16,8 @@
 	position:absolute;
 	bottom:15px;
 	right:15px;
-	padding:10px;	background-color:white;
-	background-color:rgba(255,255,255,0.8);
+	padding:10px;	background:white;
+	background:rgba(255,255,255,0.8);
 	border-radius:5px;
 	width:300px;
 	opacity:0;
