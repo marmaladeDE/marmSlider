@@ -48,3 +48,5 @@ oxutilsfile => marm/slider/marm_slider_oxutilsfile
 #####
 6) clean you language cache (cleanup eshop tmp dir)
 
+#####
+7) Set write permissions for out/pictures/promo
